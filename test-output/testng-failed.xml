@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Smoke Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.AnnotationTransformer"/>
+    <listener class-name="org.testng.reporters.TestHTMLReporter"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="Login Test(failed)">
+    <classes>
+      <class name="testClasses.authentication.LoginTest">
+        <methods>
+          <include name="closeAppiumDriver"/>
+          <include name="setUpForTest"/>
+          <include name="takesScreenshotIfFailed"/>
+          <include name="verifySigninWithEmail"/>
+          <include name="setupDevice"/>
+          <include name="setTestsCount"/>
+          <include name="setSuiteTestsCount"/>
+          <include name="setUpForSuite"/>
+        </methods>
+      </class> <!-- testClasses.authentication.LoginTest -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+</suite> <!-- Failed suite [Smoke Suite] -->
